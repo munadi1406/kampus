@@ -1,11 +1,12 @@
 <?php
 // Display selected user data based on id
 // Getting id from url
+include '../koneksi.php';
 $id = $_GET['id'];
 // Fetech user data based on id
-$result = mysqli_query($con, "SELECT * FROM mahasiswa WHERE id=$id");
+$result = mysqli_query($con, "SELECT * FROM dosen WHERE id=$id");
 while ($data = mysqli_fetch_array($result)) {
-    $nim = $data['nim'];
+    $nip = $data['nip'];
     $nama = $data['nama'];
     $alamat = $data['alamat'];
     $jk = $data['jenis_kelamin'];
@@ -17,14 +18,14 @@ while ($data = mysqli_fetch_array($result)) {
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="panel-title">Ubah Data Mahasiswa</h3>
+                <h3 class="panel-title">Ubah Data DOSEN</h3>
             </div>
             <div class="card-body">
-                <form method="POST" action="?page=mahasiswa-update" class="form-horizontal">
+                <form method="POST" action="?page=update-dosen" class="form-horizontal">
                     <div class="form-group">
-                        <label for="nim" class="col-sm-2 control-label">NIM</label>
+                        <label for="nim" class="col-sm-2 control-label">NIP</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nim" value="<?php echo $nim; ?>" required>
+                            <input type="text" class="form-control" name="nip" value="<?php echo $nip; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -52,15 +53,13 @@ while ($data = mysqli_fetch_array($result)) {
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" value="<?php echo $email;
-                                                                                            ?>" required>
+                            <input type="email" class="form-control" name="email" value="<?php echo $email; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="telepon" class="col-sm-2 control-label">Telepon</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="telepon" value="<?php echo
-                                                                                            $telepon; ?>" required>
+                            <input type="telepon" class="form-control" name="telepon" value="<?php echo $telepon; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">

@@ -1,6 +1,6 @@
 </div>
  
- <footer> 
+ <footer class="backgroundf"> 
  <div class="container">
  <span>&copy; 2022 - FTI UNISKA</span>
  </div>
