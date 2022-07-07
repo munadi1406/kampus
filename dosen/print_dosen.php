@@ -18,11 +18,11 @@ include '../koneksi.php';
 $no = 1;
 $result = mysqli_query($con, "SELECT * FROM dosen");
 while ($data = mysqli_fetch_array($result)) {
- $pdf->Cell(10, 6, $no++, 1, 0);
- $pdf->Cell(20, 6, $data['nip'], 1, 0);
- $pdf->Cell(50, 6, $data['nama'], 1, 0);
- $pdf->Cell(100, 6, $data['alamat'], 1, 0);
- $pdf->Cell(50, 6, $data['email'], 1, 0);
- $pdf->Cell(30, 6, '+62'+($data['telepon']), 1, 1);
+    $pdf->Cell(10, 6, $no++, 1, 0);
+    $pdf->Cell(20, 6, $data['nip'], 1, 0);
+    $pdf->Cell(50, 6, $data['nama'], 1, 0);
+    $pdf->Cell(100, 6, $data['alamat'], 1, 0);
+    $pdf->Cell(50, 6, $data['email'], 1, 0);
+    $pdf->Cell(30, 6, '+62' + ($data['telepon']), 1, 1);
 }
 $pdf->Output();

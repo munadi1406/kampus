@@ -19,7 +19,7 @@ if (isset($_POST['Submit'])) {
             <div class="card-body">
                 <form method="POST" action="?page=add-dosen" class="form-horizontal">
                     <div class="form-group">
-                        <label for="nim" class="control-label">NIM</label>
+                        <label for="nim" class="control-label">NIP / NIDN</label>
                         <input type="text" class="form-control" name="nip" placeholder="Masukan NIP..." required>
                     </div>
                     <div class="form-group">

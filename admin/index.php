@@ -44,7 +44,7 @@ if ($_SESSION['username'] == '') {
 
 <body>
   <div class="container-fluid">
-    <h3 class="mt-4 mb-4 title">Aplikasi Data Mahasiswa</h3>
+    <h3 class="mt-4 mb-4 title">Control DATA</h3>
     <div class="row">
       <div class="col-md-3 col-sm-12 mb-4">
         <?php include 'nav.php'; ?>

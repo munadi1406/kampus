@@ -1,7 +1,6 @@
 <?php
 // Display selected user data based on id
 // Getting id from url
-include '../koneksi.php';
 $id = $_GET['id'];
 // Fetech user data based on id
 $result = mysqli_query($con, "SELECT * FROM dosen WHERE id=$id");
@@ -53,13 +52,15 @@ while ($data = mysqli_fetch_array($result)) {
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email" value="<?php echo $email; ?>" required>
+                            <input type="email" class="form-control" name="email" value="<?php echo $email;
+                                                                                            ?>" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="telepon" class="col-sm-2 control-label">Telepon</label>
                         <div class="col-sm-10">
-                            <input type="telepon" class="form-control" name="telepon" value="<?php echo $telepon; ?>" required>
+                            <input type="number" class="form-control" name="telepon" value="<?php echo
+                                                                                            $telepon; ?>" required>
                         </div>
                     </div>
                     <div class="form-group">

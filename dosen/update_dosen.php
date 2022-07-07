@@ -1,5 +1,4 @@
 <?php
-include '../koneksi.php';
 if (isset($_POST['update'])) {
  $id = $_POST['id'];
  $nip = $_POST['nip'];
@@ -9,8 +8,7 @@ if (isset($_POST['update'])) {
  $email = $_POST['email'];
  $telepon = $_POST['telepon'];
  // update user data
- $result = mysqli_query($con, "UPDATE Dosen SET nip='$nip',nama='$nama',alamat='$alamat',jenis_kelamin='$jk',email='$email',telepon='$telepon' WHERE id=$id");
- // Redirect to homepage to display updated user in list
+ $result = mysqli_query($con, "UPDATE dosen SET nip='$nip',nama='$nama',alamat='$alamat',jenis_kelamin='$jk',email='$email',telepon='$telepon' WHERE id=$id");
  header("Location:?page=show-dosen");
 }
 ?>
